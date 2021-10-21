@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modul-js</title>
+    <link rel="stylesheet" href="scss/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__box">
+          <nav class="header__list">
+            <a class="header__item" id="films">Films</a>
+            <a class="header__item" id="about">About</a>
+            <a class="header__item" id="favorite">Favorite</a>
+            <a class="header__item" id="contacts">Contacts</a>
+          </nav>
+          <div class="user">
+            <span class="user__name" id='user-name'></span>
+            <button class='user__btn' id='user-btn'>Log out</button>
+          </div>
+        </div>
+        
+      </div>
+    </header>
+    <div class="cast" id='cast'>
+      <div class="search">
+        <input
+          class="search__input"
+          id="search__input"
+          type="text"
+          placeholder="Search films"
+        />
+        <button class="search__btn" id="search__btn">Search</button>
+      </div>
+      <div class="select">
+        <select id="language">
+          <option value="">Language</option>
+          <option value="English">English</option>
+          <option value="Dutch">Deutsch</option>
+          <option value="Japanese">Japan</option>
+          <option value="Spanish">Spanish</option>
+          <option value="French">French</option>
+          <option value="Swedish">Swedish</option>
+        </select>
+        <select id="genre">
+          <option value="">Genres</option>
+          <option value="Drama">Drama</option>
+          <option value="Science-Fiction">Science-Fiction</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Crime">Crime</option>
+          <option value="Music">Music</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Action">Action</option>
+        </select>
+
+        <select id="pageShow">
+          <option value="2">Show on page</option>
+          <option value="3">3</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+        </select>
+      </div>
+    </div>
+    <div class="main">
+      <div class="container">
+        <div class="film-box" id="film-box"></div>
+      </div>
+    </div>
+    <div class="pagination-wrapper">
+      <div class="pagination" id="pagination">
+        <button class="pagination__prev-btn" id="prevPage" disabled>
+          Prev
+        </button>
+        <span class="pagination__number-page" id="currentPage">1</span>
+        <input
+          class="pagination__input-number"
+          id="inputPage"
+          placeholder="..."
+          type="number"
+          min="1"
+          max="5"
+          
+        />
+        <span class="pagination__lust-page">5</span>
+        <button class="pagination__next-btn" id="nextPage">Next</button>
+      </div>
+    </div>
+    <div class="form-wrapper" id='form-wrapper'>
+      <div class="form">
+        <h1 class="form__title">Cinema Gallery</h1>
+        <div class="form__item">
+          <input  class="form__input-name" id='log-name' type='text' placeholder="Enter you login"></input>
+        </div>
+        <div class="form__item">
+          <input  class="form__input-password" id='log-pass' type='password' placeholder="Enter you password"></input>
+        </div>
+        <div class="form__item">
+          <button class="form__btn" id='log-submit' type='submit'>Login</button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/4b31040de2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="script/utils/createNode.js"></script>
+    <script type="module" src="script/script.js"></script>
+    <script type="module" src="script/api.js"></script>
+    <script type="module" src="script/nodes.js"></script>
+  </body>
+</html>

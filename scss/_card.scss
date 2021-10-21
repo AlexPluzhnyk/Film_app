@@ -1,0 +1,35 @@
+.card-wrapper {
+  position: relative;
+  margin: 20px;
+}
+.film-box__picture {
+  width: 210px;
+  height: 295px;
+  object-fit: cover;
+}
+
+.like {
+  font-size: 30px;
+  border: none;
+  position: absolute;
+  color: rgb(236, 234, 227);
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.like.active {
+  font-size: 30px;
+  border: none;
+  position: absolute;
+  color: red;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
